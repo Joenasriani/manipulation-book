@@ -8,9 +8,9 @@ Author: **J. Nasr**. Reading edition: **September 2026 Study Edition**. Price: *
 
 Archive: `Manipulation_The_Fool_and_the_Wise_Buyer_Edition_2026-09.zip`
 
-Files: **16**; ZIP integrity: **PASS**; password: **none**.
+Files: **16**; ZIP integrity: **PASS**; password: **none**. Rebuilt and reverified **2026-09-24**.
 
-Archive SHA-256: `38c20f9c1810484dba8000132b20f23ffb621f68062caa1ceb06558f70af4401`.
+Archive SHA-256: `0849d1d5234fbdda2ea23877b2d55498dd3455cc097a9927807569b948c61bd6`.
 
 The exact book PDF, EPUB and workbook are preserved from `Manipulation_Study_Package.zip` (SHA-256 `1f058e05b0da17919435c4997fd4428c910690486ceba508283ffa7b471ff26a`). Direct buyer PDF/EPUB files must be these same bytes.
 
@@ -49,7 +49,7 @@ The current AI framework and licence came from the publication-support package. 
 
 ## Scope of verification
 
-All ZIP CRCs passed, every PDF opened without encryption, expected page/row counts matched, CSV/JSON pairs matched, and cited R/M identifiers resolved in the Source Register. EPUB container, XML, packaged resources and spine references passed; full EPUBCheck was not run. New reader PDFs were visually inspected. This packaging audit is not a new independent validation of every scientific claim or citation URL.
+All ZIP CRCs passed, every PDF opened without encryption, expected page/row counts matched, CSV/JSON pairs matched, and cited R/M identifiers resolved in the Source Register. EPUB container, XML, packaged resources and spine references passed again on 2026-09-24; full EPUBCheck was not run. New reader PDFs were visually inspected. This packaging audit is not a new independent validation of every scientific claim or citation URL.
 
 ## Delivery and remaining release gate
 
