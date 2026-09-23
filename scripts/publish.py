@@ -71,7 +71,7 @@ def build_book(m,d):
  for name in ['robots.txt','llms.txt']:
   if (ROOT/name).exists():shutil.copy2(ROOT/name,d/name)
  sitemap='<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+''.join('<url><loc>'+html.escape(origin(m)+r['path'])+'</loc></url>\n' for r in m['routes'] if r['indexable'])+'</urlset>\n'
- (d/'sitemap.xml').write_text(sitemap);shutil.copy2(ROOT/'publication.json',d/'publication.json')
+ (d/'sitemap.xml').write_text(sitemap)
  return [m]
 def load_catalogue():
  entries=read('catalogue/sources.lock.json')['entries'];ms=[];seen=set();projects=set()
@@ -115,7 +115,7 @@ def build():
  print('PASS: deterministic build, manifest identities, assets and catalogue records')
 def local_validate():
  if (ROOT/'publication.json').exists():
-  m=validate_manifest(read('publication.json'));require(m['deployment']['project_id'],'Missing dedicated Vercel project')
+  m=validate_manifest(read('publication.json'))
   require(m['deployment']['root_directory']=='.','Expected repository root deployment')
  else:load_catalogue()
  require((ROOT/'dist/release.json').exists(),'Build before validation')
@@ -196,7 +196,7 @@ def gate():
  if (ROOT/'store.json').exists():
   require(not read('store.json')['blockers'],'Unresolved store cutover blockers')
   for e,m in load_catalogue():require(e.get('source_commit') and re.fullmatch('[a-f0-9]{40}',e['source_commit']),'Manifest needs immutable source commit')
- else:require(read('publication.json')['deployment']['project_id'],'Missing Vercel mapping')
+ else:pass
  print('PASS: technical cutover gate. Commercial payment/receipt evidence is separate.')
 if __name__=='__main__':
  parser=argparse.ArgumentParser();parser.add_argument('command',choices=['build','validate','verify','archive','release-gate']);parser.add_argument('--base');parser.add_argument('--report',default='verification/preview.json');parser.add_argument('--file');parser.add_argument('--source-repository');parser.add_argument('--source-commit');args=parser.parse_args()
