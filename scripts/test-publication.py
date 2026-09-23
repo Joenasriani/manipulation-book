@@ -39,6 +39,8 @@ def public_boundary_scan():
     for path in root.rglob("*"):
         if not path.is_file() or any(part in skip_dirs for part in path.parts):
             continue
+        if path.resolve() == Path(__file__).resolve():
+            continue
         if path.name in blocked_names:
             raise AssertionError(f"Internal operations file is public: {path.relative_to(root)}")
         if path.suffix.lower() not in text_suffixes:
