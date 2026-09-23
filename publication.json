@@ -32,7 +32,7 @@
     "return_path": "/delivery",
     "cancel_path": "/",
     "verification": "not_completed",
-    "hosted_url": null
+    "hosted_url": "https://www.paypal.com/ncp/payment/Q6NP926K76AG2"
   },
   "release": {
     "product_id": "MANIPULATION-2026-09",
