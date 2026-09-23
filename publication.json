@@ -39,15 +39,16 @@
     "price": "23.33",
     "currency": "USD",
     "archive": "Manipulation_The_Fool_and_the_Wise_Buyer_Edition_2026-09.zip",
-    "archive_sha256": "38c20f9c1810484dba8000132b20f23ffb621f68062caa1ceb06558f70af4401",
+    "archive_sha256": "0849d1d5234fbdda2ea23877b2d55498dd3455cc097a9927807569b948c61bd6",
     "file_count": 16,
     "book_pages": 157,
     "source_records": 83,
     "structured_entries": 223,
     "epubcheck": "NOT_RUN",
-    "archive_verification": "recorded_in_prior_manifest_not_rechecked",
-    "private_archive_location": null,
-    "payment_to_receipt": "not_completed"
+    "archive_verification": "rebuilt_zip_crc_sha256_and_inventory_checked_2026-09-24",
+    "private_archive_location": "private_delivery_artifact",
+    "payment_to_receipt": "not_completed",
+    "epub_structural_validation": "PASS_2026-09-24"
   },
   "description": "An independent source-mapped study edition on manipulation, influence, deception and power. Mechanisms are connected to source anchors and editorial synthesis is explicitly labeled; the edition is not presented as a peer-reviewed journal publication or systematic review.",
   "keywords": "manipulation psychology, influence, deception, persuasion, coercion, behavioral science, human behavior, dark patterns, HCI, AI safety, human factors",
@@ -100,7 +101,7 @@
     "cover": "https://manipulation-book.vercel.app/assets/cover.jpg",
     "scene": "https://manipulation-book.vercel.app/assets/collection-scene.webp",
     "coreIdea": "See the mechanism behind the message.",
-    "storeLine": "Human behavior \u00b7 Influence \u00b7 Deception \u00b7 Power"
+    "storeLine": "Human behavior · Influence · Deception · Power"
   },
   "assets": [
     {
