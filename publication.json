@@ -10,45 +10,32 @@
   "canonical_url": "https://manipulation-book.vercel.app/",
   "catalogue_url": "https://reasoning-library.vercel.app/",
   "repository": {
-    "current": "Joenasriani/manipulation-book",
-    "target": "Joenasriani/manipulation-book",
-    "migration_status": "canonical_repository_created_deployment_pending"
+    "current": "Joenasriani/manipulation-book"
   },
   "deployment": {
     "provider": "vercel",
-    "project_id": "prj_LM2IRHgaBTjJ397TBzNux308FuEw",
-    "team_id": "team_aK7orsaNw316c1bdLjjKFVMy",
-    "root_directory": ".",
-    "status": "replacement_not_deployed"
+    "root_directory": "."
   },
   "checkout": {
     "provider": "paypal",
+    "mode": "hosted_button",
     "endpoint": "/api/buy",
-    "merchant": "joenasr@gmail.com",
+    "hosted_url": "https://www.paypal.com/ncp/payment/Q6NP926K76AG2",
     "product_id": "MANIPULATION-2026-09",
     "item_name": "Manipulation - The Fool and the Wise | Buyer Edition",
     "amount": "23.33",
     "currency": "USD",
     "return_path": "/delivery",
-    "cancel_path": "/",
-    "verification": "not_completed"
+    "cancel_path": "/"
   },
   "release": {
     "product_id": "MANIPULATION-2026-09",
     "title": "Manipulation - The Fool and the Wise",
     "price": "23.33",
     "currency": "USD",
-    "archive": "Manipulation_The_Fool_and_the_Wise_Buyer_Edition_2026-09.zip",
-    "archive_sha256": "0849d1d5234fbdda2ea23877b2d55498dd3455cc097a9927807569b948c61bd6",
-    "file_count": 16,
     "book_pages": 157,
     "source_records": 83,
-    "structured_entries": 223,
-    "epubcheck": "NOT_RUN",
-    "archive_verification": "rebuilt_zip_crc_sha256_and_inventory_checked_2026-09-24",
-    "private_archive_location": "private_delivery_artifact",
-    "payment_to_receipt": "not_completed",
-    "epub_structural_validation": "PASS_2026-09-24"
+    "structured_entries": 223
   },
   "description": "An independent source-mapped study edition on manipulation, influence, deception and power. Mechanisms are connected to source anchors and editorial synthesis is explicitly labeled; the edition is not presented as a peer-reviewed journal publication or systematic review.",
   "keywords": "manipulation psychology, influence, deception, persuasion, coercion, behavioral science, human behavior, dark patterns, HCI, AI safety, human factors",
@@ -129,10 +116,5 @@
       "sha256": "d0639be45d0af36e798172419d7bd173c4bd4f29e2b76cbb69db1d11bf8b0a40",
       "bytes": 165420
     }
-  ],
-  "source_evidence": {
-    "repository": "Joenasriani/test-things",
-    "commit": "1af2a6f67d3e07c582be8f7942b82ec1af9b57d4",
-    "release_record": "MANIPULATION_RELEASE_MANIFEST.md"
-  }
+  ]
 }
