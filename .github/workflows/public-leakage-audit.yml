@@ -1,0 +1,22 @@
+name: Public leakage guard
+on:
+  push:
+  pull_request:
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Reject internal material
+        shell: bash
+        run: |
+          set -euo pipefail
+          bad=0
+          for f in TO_THE_AI_BUILDER.txt THE_LAST_PAGE_IS_NOT_IN_THE_BOOK.txt VERCEL_HANDOFF.md MIGRATION_STATUS.json BOOKSTORE_PRE_MIGRATION_ROLLBACK.md PUBLISHING_WORKFLOW.md; do
+            if git ls-files | grep -qx "$f"; then echo "Blocked public file: $f"; bad=1; fi
+          done
+          p1="Chat""GPT"; p2="User"":"; p3="Assistant"":"; p4="prj""_"; p5="team""_"
+          for p in "$p1" "$p2" "$p3" "$p4" "$p5"; do
+            if git grep -n -F "$p" -- . ':!.github/workflows/public-leakage-audit.yml'; then bad=1; fi
+          done
+          exit "$bad"
