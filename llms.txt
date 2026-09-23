@@ -18,7 +18,6 @@ Independent source-mapped study edition by J. Nasr on manipulation, influence, d
 - “Dark psychology” is a reader-facing umbrella/search term, not a single scientific discipline.
 - E = source-mapped documented mechanism/category; C = editorial synthesis; H = hypothesis.
 - A citation does not imply universal effectiveness, intent, diagnosis, legality or product-market validation.
-- AI tools assisted research organization, drafting, checking, coding and production; AI output is not treated as evidence.
 - The AI/HCI pages are public research routes derived from the book's boundary and evidence framework; they are not claims that every psychological mechanism maps directly to an AI feature or risk.
 
 ## Audience relevance
