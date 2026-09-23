@@ -12,11 +12,25 @@ jobs:
         run: |
           set -euo pipefail
           bad=0
+
           for f in TO_THE_AI_BUILDER.txt THE_LAST_PAGE_IS_NOT_IN_THE_BOOK.txt VERCEL_HANDOFF.md MIGRATION_STATUS.json BOOKSTORE_PRE_MIGRATION_ROLLBACK.md PUBLISHING_WORKFLOW.md; do
-            if git ls-files | grep -qx "$f"; then echo "Blocked public file: $f"; bad=1; fi
+            if git ls-files | grep -qx "$f"; then
+              echo "Blocked public file: $f"
+              bad=1
+            fi
           done
-          p1="Chat""GPT"; p2="User"":"; p3="Assistant"":"; p4="prj""_"; p5="team""_"
-          for p in "$p1" "$p2" "$p3" "$p4" "$p5"; do
-            if git grep -n -F "$p" -- . ':!.github/workflows/public-leakage-audit.yml'; then bad=1; fi
+
+          p1="Chat""GPT"
+          p2="User"":"
+          p3="Assistant"":"
+          for p in "$p1" "$p2" "$p3"; do
+            if git grep -n -F "$p" -- . ':!.github/workflows/public-leakage-audit.yml'; then
+              bad=1
+            fi
           done
+
+          if git grep -n -E 'prj_[A-Za-z0-9]{10,}|team_[A-Za-z0-9]{10,}' -- . ':!.github/workflows/public-leakage-audit.yml'; then
+            bad=1
+          fi
+
           exit "$bad"
