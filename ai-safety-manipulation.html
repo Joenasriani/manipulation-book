@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0b0c">
+  <title>Manipulation and AI Safety | When Assistance Becomes Influence</title>
+  <meta name="description" content="A source-linked research note for AI safety, red-team and product teams on manipulation, deceptive techniques, vulnerability, optimization and human agency.">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <link rel="canonical" href="https://manipulation-book.vercel.app/ai-safety-manipulation">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Manipulation and AI Safety: When Assistance Becomes Influence">
+  <meta property="og:description" content="A systems view of manipulation, optimization, vulnerability and human agency in AI products.">
+  <meta property="og:url" content="https://manipulation-book.vercel.app/ai-safety-manipulation">
+  <meta property="og:image" content="https://manipulation-book.vercel.app/assets/cover.jpg">
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Article",
+    "headline":"Manipulation and AI Safety: When Assistance Becomes Influence",
+    "description":"A source-linked research note for AI safety, red-team and product teams on manipulation, deceptive techniques, vulnerability, optimization and human agency.",
+    "datePublished":"2026-09-16",
+    "dateModified":"2026-09-16",
+    "mainEntityOfPage":"https://manipulation-book.vercel.app/ai-safety-manipulation",
+    "author":{"@id":"https://joe-nasr-signals.vercel.app/#joe-nasr"},
+    "about":["AI safety","manipulation","deceptive techniques","human agency","human-AI interaction","vulnerability"],
+    "citation":["https://www.nist.gov/itl/ai-risk-management-framework","https://eur-lex.europa.eu/eli/reg/2024/1689/oj"]
+  }
+  </script>
+  <style>
+    :root{color-scheme:dark;--bg:#0b0b0c;--paper:#eee9df;--muted:#aaa59d;--rule:#ffffff1c;--accent:#b96a5c;--soft:#151518}
+    *{box-sizing:border-box}html{background:var(--bg)}body{margin:0;background:var(--bg);color:var(--paper);font:400 16px/1.72 Arial,Helvetica,sans-serif;-webkit-font-smoothing:antialiased}
+    main{width:min(860px,calc(100% - 2.4rem));margin:0 auto;padding:4rem 0 7rem}a{color:inherit}.back{display:inline-block;margin-bottom:3rem;color:var(--muted);text-decoration:none;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase}.eyebrow{color:var(--accent);font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase}h1{margin:.7rem 0 1.2rem;font:400 clamp(2.5rem,7vw,5rem)/.98 Georgia,serif;letter-spacing:-.048em}h2{margin:0 0 1rem;font:400 1.75rem/1.18 Georgia,serif}p,li{max-width:50rem}p{margin:0 0 1rem}section{padding:2.2rem 0;border-top:1px solid var(--rule)}ul{padding-left:1.25rem}.muted{color:var(--muted)}.lede{font-size:1.13rem;color:#d8d2c7}.callout{background:var(--soft);padding:1.2rem 1.25rem;margin:1rem 0}.refs li{margin:.45rem 0}.nav{display:flex;flex-wrap:wrap;gap:.9rem;margin-top:2rem}.nav a{color:var(--muted)}
+  </style>
+</head>
+<body>
+<main>
+  <a class="back" href="/ai-human-behavior">← Human influence mechanisms for AI builders</a>
+  <p class="eyebrow">AI safety / human behavior</p>
+  <h1>When assistance becomes influence</h1>
+  <p class="lede">An AI system can help a user decide without remaining neutral about the decision. The safety problem is not solved by calling the interaction assistance, persuasion or personalization. The mechanism still has to be inspected.</p>
+
+  <section>
+    <h2>Do not infer manipulation from outcome alone</h2>
+    <p>A user changing their mind after interacting with an AI system is not sufficient evidence of manipulation. The same observable outcome can arise from better information, ordinary persuasion, convenience, social influence, misleading framing, pressure or exploitation.</p>
+    <p>A defensible analysis therefore separates outcome, mechanism, conditions and intent. This matters for red-teaming because a system can produce harmful steering without a designer explicitly intending that exact effect, while an apparently persuasive system may also be providing legitimate decision support.</p>
+  </section>
+
+  <section>
+    <h2>Optimization changes the risk surface</h2>
+    <p>Once a system can measure which wording, timing, ranking or conversational strategy produces a target response, influence can become an optimization problem. The safety question then expands from “what did the interface say?” to “what behavior is the system rewarded for producing?”</p>
+    <div class="callout">A model objective, product metric or reinforcement signal can create pressure toward an outcome without proving manipulative intent. The correct next step is to inspect the mechanism and its effects, not to collapse objective and motive.</div>
+  </section>
+
+  <section>
+    <h2>Vulnerability requires a higher evidentiary bar</h2>
+    <p>Systems can personalize responses using signals correlated with urgency, age, financial stress, uncertainty, prior behavior or other user characteristics. That does not justify assuming vulnerability from a single signal. It does mean teams should ask whether personalization changes the user's ability to make an informed, voluntary decision.</p>
+    <p>The EU AI Act treats specified exploitation of vulnerabilities and specified purposefully manipulative or deceptive techniques as prohibited practices when its legal conditions are satisfied. The legal rule is narrower than a general psychological definition, but it makes vulnerability, informed decision-making and significant harm directly relevant to deployment analysis.</p>
+  </section>
+
+  <section>
+    <h2>Red-team questions</h2>
+    <ul>
+      <li>Can the model persistently steer toward a commercial, ideological or product objective without clearly disclosing that objective?</li>
+      <li>Does the system adapt pressure after refusal, hesitation or uncertainty?</li>
+      <li>Can generated explanations create a false impression of independent consensus, certainty or authority?</li>
+      <li>Can the system identify and exploit a user's likely fear, scarcity perception, dependency or urgency?</li>
+      <li>Are defaults, ranking, omission and conversational framing evaluated together rather than separately?</li>
+      <li>Can users inspect alternatives, provenance and uncertainty before committing?</li>
+      <li>Does the system make reversal or exit materially harder than acceptance?</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Human-AI interaction belongs inside risk management</h2>
+    <p>NIST's AI RMF explicitly includes human-AI interaction in AI risk management and notes that human roles, cognitive biases, context loss and interaction effects can alter outcomes. This supports a broader view of safety: the model is not the only object of analysis; the configuration of human, model, interface and organizational objective also matters.</p>
+  </section>
+
+  <section>
+    <h2>Boundary conditions</h2>
+    <p>Not every persuasive output is manipulative. Not every personalization is exploitative. Not every model error is deception. Not every refusal mechanism protects agency. Terms should be assigned only when the observable conditions justify them.</p>
+    <p><em>Manipulation — The Fool and the Wise</em> uses explicit evidence labels and boundary rules for this reason: strong language without discriminating evidence creates classification error rather than safety.</p>
+  </section>
+
+  <section>
+    <h2>Selected public sources</h2>
+    <ul class="refs">
+      <li><a href="https://www.nist.gov/itl/ai-risk-management-framework" rel="external">NIST — AI Risk Management Framework</a></li>
+      <li><a href="https://airc.nist.gov/airmf-resources/airmf/appendices/app-c-ai-risk-management-and-human-ai-interaction/" rel="external">NIST — AI Risk Management and Human-AI Interaction</a></li>
+      <li><a href="https://eur-lex.europa.eu/eli/reg/2024/1689/oj" rel="external">EUR-Lex — Regulation (EU) 2024/1689</a></li>
+    </ul>
+    <nav class="nav" aria-label="Related pages"><a href="/ai-human-behavior">AI builders overview</a><a href="/human-agency-hci">Human agency &amp; HCI</a><a href="/methodology">Methodology</a><a href="/sample">Sample</a><a href="/">Book</a></nav>
+  </section>
+</main>
+</body>
+</html>

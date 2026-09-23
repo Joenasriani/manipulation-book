@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0b0c">
+  <title>Human Agency, Choice Architecture and AI Interface Design</title>
+  <meta name="description" content="A source-linked HCI research route on human agency, choice architecture, dark patterns, defaults, friction, transparency and correction in AI interfaces.">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <link rel="canonical" href="https://manipulation-book.vercel.app/human-agency-hci">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Human Agency, Choice Architecture and AI Interface Design">
+  <meta property="og:description" content="How AI interfaces can preserve or impair user agency through defaults, friction, transparency and correction.">
+  <meta property="og:url" content="https://manipulation-book.vercel.app/human-agency-hci">
+  <meta property="og:image" content="https://manipulation-book.vercel.app/assets/cover.jpg">
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Article",
+    "headline":"Human Agency, Choice Architecture and AI Interface Design",
+    "description":"A source-linked HCI research route on human agency, choice architecture, dark patterns, defaults, friction, transparency and correction in AI interfaces.",
+    "datePublished":"2026-09-16",
+    "dateModified":"2026-09-16",
+    "mainEntityOfPage":"https://manipulation-book.vercel.app/human-agency-hci",
+    "author":{"@id":"https://joe-nasr-signals.vercel.app/#joe-nasr"},
+    "about":["human-computer interaction","human agency","choice architecture","dark patterns","AI interface design","human factors"],
+    "citation":["https://www.ftc.gov/reports/bringing-dark-patterns-light","https://airc.nist.gov/airmf-resources/airmf/appendices/app-c-ai-risk-management-and-human-ai-interaction/"]
+  }
+  </script>
+  <style>
+    :root{color-scheme:dark;--bg:#0b0b0c;--paper:#eee9df;--muted:#aaa59d;--rule:#ffffff1c;--accent:#b96a5c;--soft:#151518}
+    *{box-sizing:border-box}html{background:var(--bg)}body{margin:0;background:var(--bg);color:var(--paper);font:400 16px/1.72 Arial,Helvetica,sans-serif;-webkit-font-smoothing:antialiased}
+    main{width:min(860px,calc(100% - 2.4rem));margin:0 auto;padding:4rem 0 7rem}a{color:inherit}.back{display:inline-block;margin-bottom:3rem;color:var(--muted);text-decoration:none;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase}.eyebrow{color:var(--accent);font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase}h1{margin:.7rem 0 1.2rem;font:400 clamp(2.5rem,7vw,5rem)/.98 Georgia,serif;letter-spacing:-.048em}h2{margin:0 0 1rem;font:400 1.75rem/1.18 Georgia,serif}p,li{max-width:50rem}p{margin:0 0 1rem}section{padding:2.2rem 0;border-top:1px solid var(--rule)}ul{padding-left:1.25rem}.muted{color:var(--muted)}.lede{font-size:1.13rem;color:#d8d2c7}.callout{background:var(--soft);padding:1.2rem 1.25rem;margin:1rem 0}.refs li{margin:.45rem 0}.nav{display:flex;flex-wrap:wrap;gap:.9rem;margin-top:2rem}.nav a{color:var(--muted)}
+  </style>
+</head>
+<body>
+<main>
+  <a class="back" href="/ai-human-behavior">← Human influence mechanisms for AI builders</a>
+  <p class="eyebrow">HCI / human factors</p>
+  <h1>Human agency in AI interface design</h1>
+  <p class="lede">Agency is not preserved simply because a user can technically click “no.” Interface structure changes what people notice, understand, compare, accept, reject and reverse.</p>
+
+  <section>
+    <h2>Choice is designed before it is chosen</h2>
+    <p>Every interface establishes a local choice architecture: what appears first, what is preselected, what requires effort, what looks authoritative, what can be inspected, and what remains out of view. AI adds another layer because the interface can generate explanations, adapt language, rank options and respond dynamically to hesitation or refusal.</p>
+    <p>That makes interface analysis inseparable from interaction analysis. A neutral-looking chat box can still contain strong asymmetries in default behavior, information access, provenance and recovery.</p>
+  </section>
+
+  <section>
+    <h2>Friction can protect or pressure</h2>
+    <p>Friction is not inherently harmful. Confirmation steps can prevent mistakes; additional context can improve informed choice; delays can reduce impulsive action. The same design variable can become problematic when friction is selectively imposed on refusal, cancellation, privacy-preserving choices or correction while acceptance remains immediate.</p>
+    <p>The FTC's work on dark patterns documents interfaces that can obscure, subvert or impair consumer autonomy and decision-making through tactics such as hidden terms, difficult cancellation, misleading presentation and privacy-steering designs.</p>
+  </section>
+
+  <section>
+    <h2>Transparency is more than disclosure</h2>
+    <p>A system can disclose information and still make that information functionally invisible through timing, hierarchy, complexity or repetition. A useful HCI question is therefore not only “was it disclosed?” but “could a reasonable user notice, understand and act on it at the point where it mattered?”</p>
+    <div class="callout">Visibility, comprehension and actionability are separate properties. A disclosure can satisfy one while failing the others.</div>
+  </section>
+
+  <section>
+    <h2>Correction is part of agency</h2>
+    <p>AI interfaces frequently generate summaries, recommendations and inferred interpretations. Preserving agency requires more than initial consent: users need practical ways to inspect assumptions, compare alternatives, correct errors, reverse actions and exit a path without disproportionate cost.</p>
+    <p>NIST's AI RMF places human roles, context and human-AI interaction inside risk management. This is relevant because user behavior can be shaped not only by model output but by the configuration of model, interface, workflow and organizational objective.</p>
+  </section>
+
+  <section>
+    <h2>Questions for interface review</h2>
+    <ul>
+      <li>What is the default, and who benefits from it?</li>
+      <li>Is refusal as legible and actionable as acceptance?</li>
+      <li>Does the system distinguish recommendation from requirement?</li>
+      <li>Can users inspect why an option was ranked or suggested?</li>
+      <li>Are uncertainty and source limitations visible before commitment?</li>
+      <li>Can users correct the system's interpretation of them?</li>
+      <li>Does personalization amplify urgency, dependence or pressure?</li>
+      <li>Can a user leave, reverse or compare without hidden penalties?</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Do not collapse UX quality into ethics</h2>
+    <p>A smooth interface is not necessarily agency-preserving, and a high-friction interface is not necessarily manipulative. Usability, persuasion, safety, accessibility, commercial optimization and autonomy are different evaluation dimensions. They can align, but they can also conflict.</p>
+    <p>The book's boundary method is useful here because it keeps superficially similar outcomes separate until the relevant conditions are known.</p>
+  </section>
+
+  <section>
+    <h2>Selected public sources</h2>
+    <ul class="refs">
+      <li><a href="https://www.ftc.gov/reports/bringing-dark-patterns-light" rel="external">U.S. Federal Trade Commission — Bringing Dark Patterns to Light</a></li>
+      <li><a href="https://airc.nist.gov/airmf-resources/airmf/appendices/app-c-ai-risk-management-and-human-ai-interaction/" rel="external">NIST — AI Risk Management and Human-AI Interaction</a></li>
+      <li><a href="https://www.nist.gov/itl/ai-risk-management-framework" rel="external">NIST — AI Risk Management Framework</a></li>
+    </ul>
+    <nav class="nav" aria-label="Related pages"><a href="/ai-human-behavior">AI builders overview</a><a href="/ai-safety-manipulation">Manipulation &amp; AI safety</a><a href="/methodology">Methodology</a><a href="/sample">Sample</a><a href="/">Book</a></nav>
+  </section>
+</main>
+</body>
+</html>

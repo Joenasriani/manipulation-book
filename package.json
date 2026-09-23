@@ -1,0 +1,9 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "python3 scripts/publish.py build",
+    "validate": "python3 scripts/publish.py validate",
+    "test": "python3 scripts/test-publication.py"
+  }
+}

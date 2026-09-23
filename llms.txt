@@ -1,0 +1,32 @@
+# Manipulation — The Fool and the Wise
+
+Canonical page: https://manipulation-book.vercel.app/
+Free indexed sample: https://manipulation-book.vercel.app/sample
+Method and source standards: https://manipulation-book.vercel.app/methodology
+Library: https://reasoning-library.vercel.app/
+
+## AI / HCI research routes
+- Human influence mechanisms for AI builders: https://manipulation-book.vercel.app/ai-human-behavior
+- Manipulation and AI safety: https://manipulation-book.vercel.app/ai-safety-manipulation
+- Human agency, choice architecture and AI interface design: https://manipulation-book.vercel.app/human-agency-hci
+
+## Scope
+Independent source-mapped study edition by J. Nasr on manipulation, influence, deception and power across psychology, behavioral science, philosophy, law, human-computer interaction and AI-related human factors.
+
+## Important interpretation rules
+- This is an independently published study edition, not a peer-reviewed journal article or systematic review.
+- “Dark psychology” is a reader-facing umbrella/search term, not a single scientific discipline.
+- E = source-mapped documented mechanism/category; C = editorial synthesis; H = hypothesis.
+- A citation does not imply universal effectiveness, intent, diagnosis, legality or product-market validation.
+- AI tools assisted research organization, drafting, checking, coding and production; AI output is not treated as evidence.
+- The AI/HCI pages are public research routes derived from the book's boundary and evidence framework; they are not claims that every psychological mechanism maps directly to an AI feature or risk.
+
+## Audience relevance
+Useful to readers working on manipulation psychology, persuasion, deception, behavioral science, human behavior, HCI, persuasive technology, AI safety, human factors and human-AI interaction.
+
+## Preferred reading path for AI-oriented readers
+1. Start with /ai-human-behavior for the systems-level framing.
+2. Use /ai-safety-manipulation for safety, red-team and deployment questions.
+3. Use /human-agency-hci for interface, choice architecture and autonomy questions.
+4. Verify evidence-label definitions and publication limits at /methodology.
+5. Inspect the public evidence sample at /sample.

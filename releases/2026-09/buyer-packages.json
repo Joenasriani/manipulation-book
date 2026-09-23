@@ -1,0 +1,35 @@
+{
+  "control_date": "2026-09-19",
+  "files_status": "ASSEMBLED_INTEGRITY_CHECKED",
+  "source_deployment_status": "PENDING",
+  "payment_to_receipt": "NOT_COMPLETED",
+  "delivery_mode": "manual_verification_then_private_email",
+  "products": [
+    {
+      "product_id": "MANIPULATION-2026-09",
+      "title": "Manipulation - The Fool and the Wise",
+      "price": "23.33",
+      "currency": "USD",
+      "archive": "Manipulation_The_Fool_and_the_Wise_Buyer_Edition_2026-09.zip",
+      "archive_sha256": "38c20f9c1810484dba8000132b20f23ffb621f68062caa1ceb06558f70af4401",
+      "file_count": 16,
+      "book_pages": 157,
+      "source_records": 83,
+      "structured_entries": 223,
+      "epubcheck": "NOT_RUN"
+    },
+    {
+      "product_id": "STRUCTURE-2026-09",
+      "title": "The Structure of Life - The Structure of Reasoning",
+      "price": "23.33",
+      "currency": "USD",
+      "archive": "The_Structure_of_Life_Buyer_Edition_2026-09.zip",
+      "archive_sha256": "f20240583f73a428eca10470b5ad4cb58e7b1a3b1b426b4fe965bca6a9ce377a",
+      "file_count": 21,
+      "book_pages": 160,
+      "source_records": 52,
+      "structured_entries": 51,
+      "epubcheck": "NOT_RUN"
+    }
+  ]
+}

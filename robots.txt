@@ -1,0 +1,27 @@
+User-agent: *
+Allow: /
+
+# Search/discovery crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+# Search visibility without model-training access where the provider separates them
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+Sitemap: https://manipulation-book.vercel.app/sitemap.xml

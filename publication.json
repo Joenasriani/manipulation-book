@@ -1,0 +1,137 @@
+{
+  "schema_version": "1.0.0",
+  "id": "manipulation-the-fool-and-the-wise",
+  "kind": "book",
+  "title": "Manipulation",
+  "subtitle": "The Fool and the Wise",
+  "author": "J. Nasr",
+  "edition": "September 2026 Study Edition",
+  "publication_status": "published_study_edition",
+  "canonical_url": "https://manipulation-book.vercel.app/",
+  "catalogue_url": "https://reasoning-library.vercel.app/",
+  "repository": {
+    "current": "Joenasriani/manipulation-book",
+    "target": "Joenasriani/manipulation-book",
+    "migration_status": "canonical_repository_created_deployment_pending"
+  },
+  "deployment": {
+    "provider": "vercel",
+    "project_id": "prj_LM2IRHgaBTjJ397TBzNux308FuEw",
+    "team_id": "team_aK7orsaNw316c1bdLjjKFVMy",
+    "root_directory": ".",
+    "status": "replacement_not_deployed"
+  },
+  "checkout": {
+    "provider": "paypal",
+    "endpoint": "/api/buy",
+    "merchant": "joenasr@gmail.com",
+    "product_id": "MANIPULATION-2026-09",
+    "item_name": "Manipulation - The Fool and the Wise | Buyer Edition",
+    "amount": "23.33",
+    "currency": "USD",
+    "return_path": "/delivery",
+    "cancel_path": "/",
+    "verification": "not_completed"
+  },
+  "release": {
+    "product_id": "MANIPULATION-2026-09",
+    "title": "Manipulation - The Fool and the Wise",
+    "price": "23.33",
+    "currency": "USD",
+    "archive": "Manipulation_The_Fool_and_the_Wise_Buyer_Edition_2026-09.zip",
+    "archive_sha256": "38c20f9c1810484dba8000132b20f23ffb621f68062caa1ceb06558f70af4401",
+    "file_count": 16,
+    "book_pages": 157,
+    "source_records": 83,
+    "structured_entries": 223,
+    "epubcheck": "NOT_RUN",
+    "archive_verification": "recorded_in_prior_manifest_not_rechecked",
+    "private_archive_location": null,
+    "payment_to_receipt": "not_completed"
+  },
+  "description": "An independent source-mapped study edition on manipulation, influence, deception and power. Mechanisms are connected to source anchors and editorial synthesis is explicitly labeled; the edition is not presented as a peer-reviewed journal publication or systematic review.",
+  "keywords": "manipulation psychology, influence, deception, persuasion, coercion, behavioral science, human behavior, dark patterns, HCI, AI safety, human factors",
+  "routes": [
+    {
+      "path": "/ai-human-behavior",
+      "file": "ai-human-behavior.html",
+      "indexable": true
+    },
+    {
+      "path": "/ai-safety-manipulation",
+      "file": "ai-safety-manipulation.html",
+      "indexable": true
+    },
+    {
+      "path": "/delivery",
+      "file": "delivery.html",
+      "indexable": false
+    },
+    {
+      "path": "/human-agency-hci",
+      "file": "human-agency-hci.html",
+      "indexable": true
+    },
+    {
+      "path": "/",
+      "file": "index.html",
+      "indexable": true
+    },
+    {
+      "path": "/methodology",
+      "file": "methodology.html",
+      "indexable": true
+    },
+    {
+      "path": "/sample",
+      "file": "sample.html",
+      "indexable": true
+    },
+    {
+      "path": "/terms",
+      "file": "terms.html",
+      "indexable": true
+    }
+  ],
+  "catalogue": {
+    "status": "published",
+    "index": "01",
+    "theme": "manipulation",
+    "cover": "https://manipulation-book.vercel.app/assets/cover.jpg",
+    "scene": "https://manipulation-book.vercel.app/assets/collection-scene.webp",
+    "coreIdea": "See the mechanism behind the message.",
+    "storeLine": "Human behavior \u00b7 Influence \u00b7 Deception \u00b7 Power"
+  },
+  "assets": [
+    {
+      "path": "assets/Manipulation_Free_Sample.pdf",
+      "sha256": "b85127e80f19c39be4a3df42a54daeb7fe8ed7a0c8ca00f1ab1a5dcf5f82dcfa",
+      "bytes": 315489
+    },
+    {
+      "path": "assets/collection-scene.webp",
+      "sha256": "acf29290ab55b0ed2758e58e94ac263eea16223ec86d608c36cba08533ee92e9",
+      "bytes": 91452
+    },
+    {
+      "path": "assets/cover.jpg",
+      "sha256": "04b955974fe7dfca884c322c2c56a24b57b63d88d9c5dd9b52ef0885370aaef7",
+      "bytes": 1076151
+    },
+    {
+      "path": "assets/fonts/OFL.txt",
+      "sha256": "e01b637272e0cbdfb240184dd98ea5cc671556d9894dae2668d92ab2c906787c",
+      "bytes": 4384
+    },
+    {
+      "path": "assets/fonts/manrope.ttf",
+      "sha256": "d0639be45d0af36e798172419d7bd173c4bd4f29e2b76cbb69db1d11bf8b0a40",
+      "bytes": 165420
+    }
+  ],
+  "source_evidence": {
+    "repository": "Joenasriani/test-things",
+    "commit": "1af2a6f67d3e07c582be8f7942b82ec1af9b57d4",
+    "release_record": "MANIPULATION_RELEASE_MANIFEST.md"
+  }
+}
