@@ -1,7 +1,10 @@
 # Manipulation: The Fool and the Wise
 
-Public source for the book website, sample, methodology, terms, discovery metadata and checkout route.
+Public website source for the study edition by J. Nasr.
 
-Canonical publication: https://manipulation-book.vercel.app/
+- Book: https://manipulation-book.vercel.app/
+- Free sample: https://manipulation-book.vercel.app/sample
+- Methodology: https://manipulation-book.vercel.app/methodology
+- Reasoning Library: https://reasoning-library.vercel.app/
 
-Reasoning Library: https://reasoning-library.vercel.app/
+This repository contains public publication source only. Private buyer files, customer records, credentials, deployment notes and internal production material are excluded.
