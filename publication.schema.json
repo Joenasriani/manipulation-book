@@ -56,6 +56,13 @@
         },
         "currency": {
           "const": "USD"
+        },
+        "hosted_url": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Public PayPal hosted button or payment link confirmed for this publication. Null retains the existing fixed-parameter redirect."
         }
       }
     },

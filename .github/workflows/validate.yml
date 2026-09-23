@@ -16,3 +16,4 @@ jobs:
       - run: python scripts/publish.py build
       - run: python scripts/publish.py validate
       - run: python scripts/test-publication.py
+      - run: node scripts/test-paypal.mjs

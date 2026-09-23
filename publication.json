@@ -31,7 +31,8 @@
     "currency": "USD",
     "return_path": "/delivery",
     "cancel_path": "/",
-    "verification": "not_completed"
+    "verification": "not_completed",
+    "hosted_url": null
   },
   "release": {
     "product_id": "MANIPULATION-2026-09",

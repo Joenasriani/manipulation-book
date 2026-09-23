@@ -4,7 +4,9 @@ root=Path(__file__).resolve().parents[1]
 def run(path,*args):return subprocess.run([sys.executable,str(path/'scripts/publish.py'),*args],capture_output=True,text=True)
 def need(ok,msg):
  if not ok:raise AssertionError(msg)
-before=(root/'dist/release.json').read_bytes();r=run(root,'build');need(r.returncode==0,r.stderr);need(before==(root/'dist/release.json').read_bytes(),'Build is not deterministic')
+manifest=json.loads((root/'publication.json').read_text()) if (root/'publication.json').exists() else {}
+release_path=root/'dist'/manifest.get('public_metadata',{}).get('release','/release.json').lstrip('/')
+before=release_path.read_bytes();r=run(root,'build');need(r.returncode==0,r.stderr);need(before==release_path.read_bytes(),'Build is not deterministic')
 with tempfile.TemporaryDirectory() as tmp:
  d=Path(tmp)/'candidate';shutil.copytree(root,d,ignore=shutil.ignore_patterns('.git','node_modules'))
  if (d/'publication.json').exists():
@@ -25,10 +27,12 @@ const m=JSON.parse(readFileSync('publication.json','utf8'));let out={};
 const res={setHeader(k,v){out[k]=v},status(n){out.status=n;return this},end(){},redirect(n,u){out.status=n;out.url=u}};
 handler({method:'GET',query:{amount:'0.01',item_number:'WRONG'}},res);
 const u=new URL(out.url);assert.equal(out.status,302);assert.equal(u.origin,'https://www.paypal.com');
+if (m.checkout.hosted_url) {assert.equal(out.url,m.checkout.hosted_url)} else {
 assert.equal(u.searchParams.get('amount'),m.checkout.amount);assert.equal(u.searchParams.get('item_number'),m.checkout.product_id);
 assert.equal(u.searchParams.get('business'),m.checkout.merchant);assert.equal(u.searchParams.get('currency_code'),m.checkout.currency);
 assert.equal(u.searchParams.get('return'),new URL(m.canonical_url).origin+m.checkout.return_path);
 assert.equal(u.searchParams.get('cancel_return'),new URL(m.canonical_url).origin+m.checkout.cancel_path);
+}
 out={};handler({method:'POST'},res);assert.equal(out.status,405);assert.equal(out.Allow,'GET, HEAD');
 """
  endpoint=json.loads((root/'publication.json').read_text())['checkout']['endpoint'].lstrip('/')+'.js'
