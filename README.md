@@ -1,5 +1,7 @@
 # Manipulation: The Fool and the Wise
 
-Prepared canonical repository source. Production migration is pending.
+Public source for the book website, sample, methodology, terms, discovery metadata and checkout route.
 
-See `PUBLISHING_WORKFLOW.md` for the validated publishing process and `MIGRATION_STATUS.json` for unresolved gates. Historical release records remain unchanged and refer to their recorded dates.
+Canonical publication: https://manipulation-book.vercel.app/
+
+Reasoning Library: https://reasoning-library.vercel.app/
