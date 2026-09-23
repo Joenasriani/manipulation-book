@@ -1,6 +1,6 @@
 {
-  "control_date": "2026-09-19",
-  "files_status": "ASSEMBLED_INTEGRITY_CHECKED",
+  "control_date": "2026-09-24",
+  "files_status": "REBUILT_INTEGRITY_CHECKED",
   "source_deployment_status": "PENDING",
   "payment_to_receipt": "NOT_COMPLETED",
   "delivery_mode": "manual_verification_then_private_email",
@@ -11,12 +11,13 @@
       "price": "23.33",
       "currency": "USD",
       "archive": "Manipulation_The_Fool_and_the_Wise_Buyer_Edition_2026-09.zip",
-      "archive_sha256": "38c20f9c1810484dba8000132b20f23ffb621f68062caa1ceb06558f70af4401",
+      "archive_sha256": "0849d1d5234fbdda2ea23877b2d55498dd3455cc097a9927807569b948c61bd6",
       "file_count": 16,
       "book_pages": 157,
       "source_records": 83,
       "structured_entries": 223,
-      "epubcheck": "NOT_RUN"
+      "epubcheck": "NOT_RUN",
+      "epub_structural_validation": "PASS"
     },
     {
       "product_id": "STRUCTURE-2026-09",
@@ -24,12 +25,13 @@
       "price": "23.33",
       "currency": "USD",
       "archive": "The_Structure_of_Life_Buyer_Edition_2026-09.zip",
-      "archive_sha256": "f20240583f73a428eca10470b5ad4cb58e7b1a3b1b426b4fe965bca6a9ce377a",
+      "archive_sha256": "3b7cea4d9df34182869b90a093ce5c7c1343ae885b38a4543a0d66868489b965",
       "file_count": 21,
       "book_pages": 160,
       "source_records": 52,
       "structured_entries": 51,
-      "epubcheck": "NOT_RUN"
+      "epubcheck": "NOT_RUN",
+      "epub_structural_validation": "PASS"
     }
   ]
 }
