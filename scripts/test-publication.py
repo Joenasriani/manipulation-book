@@ -39,3 +39,58 @@ out={};handler({method:'POST'},res);assert.equal(out.status,405);assert.equal(ou
  script=script.replace('CHECKOUT_FILE',endpoint)
  r=subprocess.run(['node','--input-type=module','-e',script],cwd=root,capture_output=True,text=True);need(r.returncode==0,r.stderr)
 print('PASS: reproducible build, rejected identity/price or snapshot tampering, rejected unverified cutover, fixed checkout mapping')
+
+# Discovery checks run against the actual build, not the source templates.
+import re, xml.etree.ElementTree as ET
+from urllib.parse import urlsplit
+from html.parser import HTMLParser
+class Head(HTMLParser):
+ def __init__(self):super().__init__();self.canonicals=[];self.robots=[];self.descriptions=[]
+ def handle_starttag(self,tag,attrs):
+  a=dict(attrs)
+  if tag=='link' and a.get('rel')=='canonical':self.canonicals.append(a.get('href'))
+  if tag=='meta' and a.get('name')=='robots':self.robots.append(a.get('content',''))
+  if tag=='meta' and a.get('name')=='description':self.descriptions.append(a.get('content',''))
+m=manifest
+if m:
+ origin='https://'+urlsplit(m['canonical_url']).netloc
+ routes=m['routes']
+else:
+ origin=json.loads((root/'store.json').read_text())['canonical_url'].rstrip('/')
+ routes=[{'path':'/','file':'index.html','indexable':True}]
+for route in routes:
+ text=(root/'dist'/route['file']).read_text();head=Head();head.feed(text)
+ need(head.canonicals==[origin+route['path']],'Missing or conflicting canonical: '+route['path'])
+ if route['indexable']:
+  need(not any('noindex' in x for x in head.robots),'Public page blocked: '+route['path'])
+  need(len(head.descriptions)==1 and head.descriptions[0].strip(),'Missing description: '+route['path'])
+ else:need(any('noindex' in x for x in head.robots),'Delivery page is indexable')
+ for raw in re.findall(r'<script type="application/ld\+json">(.*?)</script>',text,re.S):
+  data=json.loads(raw)
+  def check(node):
+   if isinstance(node,list):
+    for child in node:check(child)
+   elif isinstance(node,dict):
+    types=node.get('@type',[])
+    if 'Product' in types:
+     need(node['offers']['url']==node['url'],'Offer points away from canonical product page')
+     need(node['author']['@id']=='https://joe-nasr-signals.vercel.app/#joe-nasr','Disconnected author identity')
+     if 'Book' in types:need(bool(node.get('bookEdition')),'Edition lost during build')
+    for child in node.values():check(child)
+  check(data)
+sitemap=root/'dist'/m.get('public_metadata',{}).get('sitemap','/sitemap.xml').lstrip('/')
+urls={n.text for n in ET.parse(sitemap).iter('{http://www.sitemaps.org/schemas/sitemap/0.9}loc')}
+need(urls=={origin+r['path'] for r in routes if r['indexable']},'Sitemap differs from indexable routes')
+config=json.loads((root/'vercel.json').read_text())
+for rule in config['headers']:
+ if rule['source']=='/(.*)' and not rule.get('has'):
+  need(not any(h['key'].lower()=='x-robots-tag' and 'noindex' in h['value'] for h in rule['headers']),'Global noindex blocks production')
+print('PASS: canonical URLs, public indexing, edition/author metadata and sitemap boundaries')
+
+script="""import assert from 'node:assert/strict';import {checkoutUrl} from './lib/paypal.js';
+for (const hosted_url of [undefined, '', 'https://example.com/ncp/payment/WRONGPRODUCT', 'https://www.paypal.com/ncp/payment/TESTBUTTON123?amount=0.01']) {
+ assert.throws(()=>checkoutUrl({checkout:{hosted_url}}));
+}
+"""
+r=subprocess.run(['node','--input-type=module','-e',script],cwd=root,capture_output=True,text=True);need(r.returncode==0,r.stderr)
+print('PASS: missing, foreign and modified hosted checkout links fail closed')

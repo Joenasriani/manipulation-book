@@ -61,8 +61,11 @@ def validate_manifest(m):
   require(c['return_path'] in paths,'Missing delivery route')
  return m
 def product_schema(m):
- p={'@type':['Book','Product'] if m['kind']=='book' else ['CreativeWork','Product'],'@id':m['canonical_url']+'#publication','name':full_title(m),'url':m['canonical_url'],'description':m['description'],'author':{'@type':'Person','name':m['author'],'url':'https://joe-nasr-signals.vercel.app/'},'inLanguage':'en','offers':{'@type':'Offer','price':m['checkout']['amount'],'priceCurrency':m['checkout']['currency'],'url':origin(m)+m['checkout']['endpoint']}}
+ p={'@type':['Book','Product'] if m['kind']=='book' else ['CreativeWork','Product'],'@id':m['canonical_url']+('#book' if m['kind']=='book' else '#product'),'name':full_title(m),'url':m['canonical_url'],'description':m['description'],'author':{'@type':'Person','@id':'https://joe-nasr-signals.vercel.app/#joe-nasr','name':m['author'],'url':'https://joe-nasr-signals.vercel.app/'},'inLanguage':'en','offers':{'@type':'Offer','price':m['checkout']['amount'],'priceCurrency':m['checkout']['currency'],'url':m['canonical_url']}}
  if m['kind']=='book':p.update({'numberOfPages':m['release']['book_pages'],'bookFormat':'https://schema.org/EBook'})
+ if m['kind']=='book' and m.get('edition'):p['bookEdition']=m['edition']
+ if m.get('version'):p['version']=m['version']
+ if m.get('keywords'):p['keywords']=m['keywords']
  if m.get('catalogue',{}).get('cover'):p['image']=m['catalogue']['cover']
  return p
 def replace_schema(text, transform):
@@ -75,13 +78,14 @@ def build_book(m,d):
   src=ROOT/r['file'];require(src.is_file(),'Missing public source '+r['file'])
   txt=src.read_text(); canonical=origin(m)+r['path']
   txt=re.sub(r'(<link\s+rel="canonical"\s+href=")[^"]*(")',lambda x:x[1]+canonical+x[2],txt)
+  if not re.search(r'<link\s+rel="canonical"',txt):txt=txt.replace('</head>','<link rel="canonical" href="'+html.escape(canonical,quote=True)+'">\n</head>')
   txt=re.sub(r'(<meta\s+property="og:url"\s+content=")[^"]*(")',lambda x:x[1]+canonical+x[2],txt)
   def transform(obj):
    graph=obj.get('@graph',[obj]);out=[]
    for node in graph:
     types=node.get('@type',[])
     if 'Book' in types or 'Product' in types:
-     new=product_schema(m);new['@id']=node.get('@id',new['@id']);out.append(new)
+     new=product_schema(m);new['@id']=node.get('@id',new['@id']);out.append({**{k:v for k,v in node.items() if k not in ['offers','availability']},**new})
     else:out.append(node)
    return {**obj,'@graph':out} if '@graph' in obj else out[0]
   txt=replace_schema(txt,transform)
