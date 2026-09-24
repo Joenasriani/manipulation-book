@@ -7,8 +7,8 @@
   "author": "J. Nasr",
   "edition": "September 2026 Study Edition",
   "publication_status": "published_study_edition",
-  "canonical_url": "https://manipulation-book.vercel.app/",
-  "catalogue_url": "https://reasoning-library.vercel.app/",
+  "canonical_url": "https://manipulation-book-theta.vercel.app/",
+  "catalogue_url": "https://reasoning-library-chi.vercel.app/",
   "repository": {
     "current": "Joenasriani/manipulation-book"
   },
@@ -85,8 +85,8 @@
     "status": "published",
     "index": "01",
     "theme": "manipulation",
-    "cover": "https://manipulation-book.vercel.app/assets/cover.jpg",
-    "scene": "https://manipulation-book.vercel.app/assets/collection-scene.webp",
+    "cover": "https://manipulation-book-theta.vercel.app/assets/cover.jpg",
+    "scene": "https://manipulation-book-theta.vercel.app/assets/collection-scene.webp",
     "coreIdea": "See the mechanism behind the message.",
     "storeLine": "Human behavior · Influence · Deception · Power"
   },

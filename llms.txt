@@ -1,14 +1,14 @@
 # Manipulation — The Fool and the Wise
 
-Canonical page: https://manipulation-book.vercel.app/
-Free indexed sample: https://manipulation-book.vercel.app/sample
-Method and source standards: https://manipulation-book.vercel.app/methodology
-Library: https://reasoning-library.vercel.app/
+Canonical page: https://manipulation-book-theta.vercel.app/
+Free indexed sample: https://manipulation-book-theta.vercel.app/sample
+Method and source standards: https://manipulation-book-theta.vercel.app/methodology
+Library: https://reasoning-library-chi.vercel.app/
 
 ## AI / HCI research routes
-- Human influence mechanisms for AI builders: https://manipulation-book.vercel.app/ai-human-behavior
-- Manipulation and AI safety: https://manipulation-book.vercel.app/ai-safety-manipulation
-- Human agency, choice architecture and AI interface design: https://manipulation-book.vercel.app/human-agency-hci
+- Human influence mechanisms for AI builders: https://manipulation-book-theta.vercel.app/ai-human-behavior
+- Manipulation and AI safety: https://manipulation-book-theta.vercel.app/ai-safety-manipulation
+- Human agency, choice architecture and AI interface design: https://manipulation-book-theta.vercel.app/human-agency-hci
 
 ## Scope
 Independent source-mapped study edition by J. Nasr on manipulation, influence, deception and power across psychology, behavioral science, philosophy, law, human-computer interaction and AI-related human factors.
