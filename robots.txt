@@ -24,4 +24,4 @@ Disallow: /
 User-agent: ClaudeBot
 Disallow: /
 
-Sitemap: https://manipulation-book.vercel.app/sitemap.xml
+Sitemap: https://manipulation-book-theta.vercel.app/sitemap.xml
