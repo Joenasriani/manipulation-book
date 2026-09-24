@@ -3,7 +3,7 @@
 Canonical page: https://manipulation-book.vercel.app/
 Free indexed sample: https://manipulation-book.vercel.app/sample
 Method and source standards: https://manipulation-book.vercel.app/methodology
-Library: https://reasoning-library.vercel.app/
+Library: https://reasoning-and-logic.vercel.app/
 
 ## AI / HCI research routes
 - Human influence mechanisms for AI builders: https://manipulation-book.vercel.app/ai-human-behavior
