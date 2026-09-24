@@ -28,7 +28,7 @@ def public_boundary_scan():
         (re.compile(r"\\bprj_[A-Za-z0-9]+"), "Vercel project ID"),
         (re.compile(r"\\bteam_[A-Za-z0-9]+"), "Vercel team ID"),
         (re.compile(r"\\bVERCEL_TOKEN\\b"), "Vercel token reference"),
-        (re.compile(r"Joenasriani/test-things", re.I), "legacy combined repository"),
+        (re.compile("Joenasriani/" + "test" + "-things", re.I), "legacy combined repository"),
         (re.compile("You are " + "Chat" + "GPT", re.I), "system-prompt text"),
         (re.compile(r"<<User knowledge memory:", re.I), "memory transcript marker"),
         (re.compile(r"Model set context updated\\.", re.I), "memory update marker"),
