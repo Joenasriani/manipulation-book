@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "Reasoning Library public publication manifest",
+  "title": "Reasoning and Logic public publication manifest",
   "type": "object",
   "required": [
     "schema_version",

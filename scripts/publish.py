@@ -169,7 +169,7 @@ def build_store(out):
         + read("store.json")["canonical_url"] + "</loc></url></urlset>\n"
     )
     (out / "llms.txt").write_text(
-        "# The Reasoning Library\n\n" + "".join("- [" + full_title(m) + "](" + m["canonical_url"] + ")\n" for m in manifests)
+        "# Reasoning and Logic\n\n" + "".join("- [" + full_title(m) + "](" + m["canonical_url"] + ")\n" for m in manifests)
     )
     save(out / "data/books.json", [
         {
