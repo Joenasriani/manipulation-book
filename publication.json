@@ -35,7 +35,16 @@
     "currency": "USD",
     "book_pages": 157,
     "source_records": 83,
-    "structured_entries": 223
+    "structured_entries": 223,
+    "buyer_archive": "Manipulation_The_Fool_and_the_Wise_Buyer_Edition_2026-09.zip",
+    "buyer_archive_sha256": "738ea490c0d82cb6a93ddd4b11cac02019b456207e3b7a031b29c700bee2ba7b",
+    "buyer_archive_files": 11,
+    "buyer_archive_issued": "2026-09-25",
+    "buyer_archive_status": "canonical_reissued_buyer_edition_source_provenance_audited",
+    "package_validation": {
+      "source_provenance_scan": "PASS",
+      "zip_crc": "PASS"
+    }
   },
   "description": "An independent source-mapped study edition on manipulation, influence, deception and power. Mechanisms are connected to source anchors and editorial synthesis is explicitly labeled; the edition is not presented as a peer-reviewed journal publication or systematic review.",
   "keywords": "manipulation psychology, influence, deception, persuasion, coercion, behavioral science, human behavior, dark patterns, HCI, AI safety, human factors",
